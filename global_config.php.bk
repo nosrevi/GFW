@@ -1,0 +1,26 @@
+<?php
+
+define('DB_HOST', 'localhost');
+define('DB_USER', 'username');
+define('DB_PASSWORD', 'password');
+define('DB_NAME', 'bignet_UDC');
+
+define('HOME_PATH', '');
+define('CONTROLLER_PATH', 'controller');
+define('VIEW_PATH', 'view');
+define('MODULE_PATH', 'module');
+define('JS_PATH', 'js');
+define('CSS_PATH', 'css');
+define('IMAGE_PATH', 'images');
+define('LOGO_PATH', 'http://gfw.hechongguang.com/logo/');
+define('ERROR_LOG', 'error');
+
+global $con;
+$con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+if (!$con)
+    die("Can't connect to database<br>");
+
+$db_selected = mysql_select_db(DB_NAME);
+if (!$db_selected)
+    die("Can't select database<br>");
+
